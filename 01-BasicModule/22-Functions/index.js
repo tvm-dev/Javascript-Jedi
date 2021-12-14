@@ -36,3 +36,12 @@ const root = n => n ** 0.5 //Wowwwwwwwwwwwwwwwwwwwwwww
 console.log(root(9))
 console.log(root(16))
 console.log(root(25))
+
+
+
+function person(name, age, address) {
+  return ` Hello ${name}, how are you? I saw that you have ${age} years old and you live in ${address}, thats is right? `;
+}
+
+console.log(person('Thiago', 37, '38, Street Inocêncio Correia, São Paulo/SP'))
+console.log(person('Eike Menezes', 11, '38, Street Inocêncio Correia, São Paulo/SP'))
