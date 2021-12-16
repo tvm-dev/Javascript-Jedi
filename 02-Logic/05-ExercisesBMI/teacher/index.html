@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Health: Calcule your BMI</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+<body>
+  <section class="container">
+    <h1>BMI: Body Mass Indice</h1><hr>
+        <p>
+     <table align="center" border="1">
+      <tr>
+        <th>BMI</th>
+        <th>Results</th>
+      </tr>
+      <tr>
+        <td>Less than 18.5</td>
+        <td>Under peso</td>
+       </tr>
+       <tr>
+        <td>Between 18.5 and 24.9</td>
+        <td>Normal peso</td>
+       </tr>
+       <tr>
+         <td>Between 25 and 29.9</td>
+         <td>Overpeso</td>
+       </tr>
+       <tr>
+         <td>Between 30 and 34.9 </td>
+         <td>Obesity level 1</td>
+       </tr>
+       <tr>
+       <td>Between 35 and 39.9</td>
+       <td>Obesity level 2</td>
+      </tr>
+      <tr>
+        <td>Bigget than 40</td>
+        <td>Obesity Level 3</td>
+      </tr>
+     </table>
+    </p>
+    <hr>
+    <h4>Calcule your BMI here:</h4>
+    <!-- Form-->
+    <form id="formIMC">
+
+      <label for="peso">Peso:</label><input type="text" id="peso" placeholder="Type your peso here, like: 80">
+     
+      <label for="altura">Altura:</label><input type="text" id="altura" placeholder="Type your altura here, like: 1.81">
+     
+      <button type="submit">Calcular</button>
+        </form>
+       <!-- EndForm-->
+    <div id="resultado"></div>
+    
+  </section>
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
