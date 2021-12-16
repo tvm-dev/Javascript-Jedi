@@ -26,10 +26,12 @@ Create a variable in the CSS
 
 .container {
   max-width: 96%;
-  margin: 50px auto; /* Put the content in the all center! */
+  margin: 5px auto; /* Put the content in the all center! */
   background-color: #FFF;
   padding: 20px;
   border-radius: 10px;
+  text-align: center;
+
 
 
 }
@@ -40,7 +42,7 @@ form input, form label, form button {
   margin-bottom: 10px;
  }
  form input {
-   font-size: 24px;
+   font-size: 16px;
    height: 50px;
    padding: 0 10px;
    
@@ -67,4 +69,23 @@ form button:hover {
   transition: 0.8s;
   
 }
+table td {
+  padding: 5px;
+
+}
+
+form label {
+  text-align: left;
+  font-weight: 700;
+  color: #295be2;
+  
+}
+#bmi {
+  
+  padding: 50px;
+  margin: auto;
+  border: 1px solid red;
+}
+
+  
   
