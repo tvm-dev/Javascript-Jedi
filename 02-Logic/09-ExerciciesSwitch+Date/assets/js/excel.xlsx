@@ -1,0 +1,48 @@
+Private Sub Worksheet_SelectionChange(ByVal Target As Range)
+Dim xCombox As OLEObject
+Dim xStr As String 
+Dim xWs As Worksheet
+Dim xArr
+
+Set xWs = Application.ActiveSheet
+On Error Resume Next
+If Target.Validation.Type = 3 Then
+Target.Validation.InCellDropdown = False
+Cancel = True
+xStr = Target.Validation.Formula1
+xStr = Right(xStr, Len(xStr) -1)
+If xStr = "" Then Exit Sub
+Set xCombox = xWs.OLEObjects("CaixaProfessor")
+With xCombox
+.ListFillRange = ""
+.LinkedCell = ""
+.Visible = False
+End With
+With xCombox
+.Visible = True
+.Left = Target.Left
+.Top = Target.Top
+.Width = Target.Width + 5
+.Height = Target.Height + 5
+.ListFillRange = xStr
+if .ListFillRange = "" Then
+xArr = Split(xStr, "," )
+Me.CaixaProfessor.List = xArr
+End if
+
+.LinkedCell = Target.Address
+End With
+xCombox.Activate
+Me.CaixaProfessor.DropDown
+End if
+End Sub
+
+Private Sub CaixaProfessor_keyDown(ByVal KeyCode As MSForms.ReturnInteger, ByVal Shift As Integer)
+
+Select Case KeyCode
+Case 9
+Application.ActiveCell.Offset(0, 1).Activate
+Case 13
+Application.ActiveCell.Offset(1, 0).Activate
+End Select
+End Sub
