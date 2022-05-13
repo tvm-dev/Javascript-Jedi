@@ -69,6 +69,18 @@ form button:hover {
 }
 
 .clock{
-  font-size: 3em;
+  font-size: 4em;
 }
-  
+
+.start, .pause, .reset {
+  font-size: larger;
+  color: rgb(231, 208, 192);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  background-color: black;
+}
+
+.paused{
+  color: red;
+}
+
